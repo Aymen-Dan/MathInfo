@@ -12,7 +12,22 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.Insets?>
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="group.mathinfo.Controller">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <Label fx:id="welcomeText"/>
+
+</VBox>
+
+
+<!--
+
+<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="group.mathinfo.Controller">
     <children>
         <LineChart id="lineGraph" fx:id="lineGraph" animated="false" createSymbols="false" layoutX="200.0" legendVisible="false" prefHeight="500.0" prefWidth="500.0">
             <xAxis>
@@ -34,7 +49,7 @@
                 </Label>
                 <ImageView fitHeight="86.0" fitWidth="188.0" layoutX="7.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="/expression.png" />
+                        <Image url="expression.png" />
                     </image>
                 </ImageView>
                 <TextField fx:id="constantField" layoutX="108.0" layoutY="163.0" prefHeight="26.0" prefWidth="86.0" />
@@ -116,3 +131,4 @@
         </Button>
     </children>
 </AnchorPane>
+-->
