@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+        <LineChart id="lineGraph" fx:id="lineGraph" animated="false" createSymbols="false" layoutX="200.0" legendVisible="false" prefHeight="500.0" prefWidth="500.0">
+            <xAxis>
+                <NumberAxis autoRanging="false" lowerBound="-1.0" prefWidth="428.0" tickUnit="1.0" upperBound="19.0" fx:id="xAxis" />
+            </xAxis>
+            <yAxis>
+                <NumberAxis fx:id="yAxis" autoRanging="false" lowerBound="-100.0" side="LEFT" tickUnit="10.0" />
+            </yAxis>
+            <cursor>
+                <Cursor fx:constant="DEFAULT" />
+            </cursor>
+        </LineChart>
+        <AnchorPane layoutX="14.0" layoutY="10.0" prefHeight="480.0" prefWidth="201.0" style="-fx-border-color: #808080;">
+            <children>
+                <Label layoutX="7.0" prefHeight="55.0" prefWidth="188.0" text="Цисоїда Діокла" textAlignment="CENTER">
+                    <font>
+                        <Font name="Arial Bold" size="24.0" />
+                    </font>
+                </Label>
+                <ImageView fitHeight="86.0" fitWidth="188.0" layoutX="7.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="/expression.png" />
+                    </image>
+                </ImageView>
+                <TextField fx:id="constantField" layoutX="108.0" layoutY="163.0" prefHeight="26.0" prefWidth="86.0" />
+                <Label layoutX="14.0" layoutY="163.0" text="Значення a:">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Label>
+                <Button fx:id="drawFunctionBtn" layoutX="21.0" layoutY="388.0" mnemonicParsing="false" text="Намалювати графік">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Button>
+                <TextField fx:id="accuracyField" layoutX="108.0" layoutY="201.0" prefHeight="26.0" prefWidth="86.0" text="0.01" />
+                <Label layoutX="14.0" layoutY="201.0" prefHeight="26.0" prefWidth="86.0" text="Точність:">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Label>
+                <Separator layoutX="2.0" layoutY="147.0" prefHeight="4.0" prefWidth="196.0" />
+                <Separator layoutX="3.0" layoutY="240.0" prefHeight="4.0" prefWidth="196.0" />
+                <TextField fx:id="stepXField" layoutX="108.0" layoutY="254.0" prefHeight="26.0" prefWidth="86.0" text="1" />
+                <Label layoutX="14.0" layoutY="254.0" text="Крок x:">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="stepYField" layoutX="108.0" layoutY="293.0" prefHeight="26.0" prefWidth="86.0" text="10" />
+                <Label layoutX="14.0" layoutY="293.0" prefHeight="26.0" prefWidth="86.0" text="Крок y:">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Label>
+                <Separator layoutX="5.0" layoutY="330.0" prefHeight="4.0" prefWidth="196.0" />
+                <TextField layoutX="77.0" layoutY="344.0" prefHeight="26.0" prefWidth="46.0" text="0" fx:id="xLowerBoundField" />
+                <Label layoutX="21.0" layoutY="344.0" prefHeight="26.0" prefWidth="38.0" text="X ∈">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <Label layoutX="127.0" layoutY="333.0" prefHeight="26.0" prefWidth="8.0" text=";">
+                    <font>
+                        <Font size="30.0" />
+                    </font>
+                </Label>
+                <TextField layoutX="136.0" layoutY="344.0" prefHeight="26.0" prefWidth="46.0" fx:id="xUpperBoundField" />
+                <Label layoutX="184.0" layoutY="333.0" prefHeight="30.0" prefWidth="8.0" text=")">
+                    <font>
+                        <Font size="30.0" />
+                    </font>
+                </Label>
+                <Label layoutX="64.0" layoutY="333.0" prefHeight="30.0" prefWidth="8.0" text="[">
+                    <font>
+                        <Font size="30.0" />
+                    </font>
+                </Label>
+                <Separator layoutX="2.0" layoutY="379.0" prefHeight="4.0" prefWidth="196.0" />
+                <Button fx:id="saveBtn" layoutX="34.0" layoutY="433.0" mnemonicParsing="false" text="Зберегти графік">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Button>
+            </children>
+        </AnchorPane>
+        <Button fx:id="zoomInBtn" layoutX="656.0" layoutY="400.0" mnemonicParsing="false" text="+">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Button>
+        <Button fx:id="zoomOutBtn" layoutX="656.0" layoutY="430.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="29.0" text="-">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Button>
+        <Button fx:id="resetZoomBtn" layoutX="656.0" layoutY="363.0" mnemonicParsing="false" text="⌂">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>
