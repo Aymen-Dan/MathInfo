@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<?import javafx.scene.layout.VBox?>
+<!--<?import javafx.scene.layout.VBox?>
 <?import javafx.geometry.Insets?>
 <VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
       fx:controller="group.mathinfo.Controller">
@@ -22,7 +22,21 @@
 
     <Label fx:id="welcomeText"/>
 
-</VBox>
+</VBox>-->
+
+
+<LineChart fx:id="lineGraph" createSymbols="false" legendVisible="false" prefHeight="372.0" prefWidth="423.0"
+           visible="false" xmlns:fx="http://javafx.com/fxml">
+<xAxis>
+    <NumberAxis autoRanging="false" lowerBound="-10" side="BOTTOM" tickUnit="1" upperBound="10" />
+</xAxis>
+<yAxis>
+    <NumberAxis autoRanging="false" lowerBound="-10" side="LEFT" tickUnit="1" upperBound="10" />
+</yAxis>
+<cursor>
+    <Cursor fx:constant="CROSSHAIR" />
+</cursor>
+</LineChart>
 
 
 <!--
