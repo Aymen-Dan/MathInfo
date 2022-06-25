@@ -22,7 +22,30 @@ import javax.imageio.ImageIO;
 
 public class Controller {
 
+    private double calculateY_Graph1(double x, double constant) {
+        return Math.sqrt(Math.pow(x, 3) / (constant - x));
+    }
 
+
+    private double calculateR_Graph2(){
+
+        return 0;
+    }
+
+    private double calculateY_Graph3(){
+
+        return 0;
+    }
+
+    private double calculateY_Graph4(){
+
+        return 0;
+    }
+
+    private double calculateY_Graph5(){
+
+        return 0;
+    }
 
 
 /*
