@@ -19,10 +19,8 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws IOException {
 
-
         try {
-            Parent root = FXMLLoader.load(getClass().getClassLoader()
-                    .getResource("lankydan/tutorials/fxml/MainApp.fxml"));
+            Parent root = FXMLLoader.load(Main.class.getResource("sample.fxml"));
             stage.setScene(new Scene(root));
             stage.setTitle("JavaFX Graph Example");
             stage.show();
