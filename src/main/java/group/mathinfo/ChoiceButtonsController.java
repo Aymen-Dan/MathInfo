@@ -62,12 +62,12 @@ public class ChoiceButtonsController implements Initializable {
     //return button action
     @FXML
     private void handleReturnButtonAction(final ActionEvent event) {
-    goBack();
-    }
-
-    //return action
-    private void goBack(){
-
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(Main.class.getResource("titleWindow.fxml"))));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
