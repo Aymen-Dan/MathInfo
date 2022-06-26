@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.NumberAxis?>
+
+
+<AnchorPane maxHeight="400.0" maxWidth="600.0" minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" styleClass="root" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="group.mathinfo.Controller">
+
+
+    <children>
+        <!--the graph pane-->
+        <AnchorPane layoutX="-7.0" prefHeight="400.0" prefWidth="420.0">
+            <children>
+                <!-- <LineChart fx:id="lineGraph" legendVisible="false" prefHeight="372.0" prefWidth="423.0" visible="false">
+                     <xAxis>
+                         <NumberAxis autoRanging="false" lowerBound="-10" side="BOTTOM" tickUnit="1" upperBound="10" />
+                     </xAxis>
+                     <yAxis>
+                         <NumberAxis autoRanging="false" lowerBound="-10" side="LEFT" tickUnit="1" upperBound="10" />
+                     </yAxis>
+                     <cursor>
+                         <Cursor fx:constant="CROSSHAIR" />
+                     </cursor>
+                 </LineChart>-->
+
+                <AreaChart fx:id="areaGraph" legendVisible="false" prefHeight="372.0" prefWidth="423.0">
+                    <xAxis>
+                        <NumberAxis autoRanging="false" lowerBound="-10" side="BOTTOM" tickUnit="1" upperBound="10" />
+                    </xAxis>
+                    <yAxis>
+                        <NumberAxis autoRanging="false" lowerBound="-10" side="LEFT" tickUnit="1" upperBound="10" />
+                    </yAxis>
+                    <cursor>
+                        <Cursor fx:constant="CROSSHAIR" />
+                    </cursor>
+                </AreaChart>
+
+                <!--clear and return buttons-->
+                <Button fx:id="clearButton" layoutX="224.0" layoutY="366.0" onAction="#handleClearButtonAction"  mnemonicParsing="false" prefHeight="29.0" prefWidth="185.0" text="Clear" />
+                <Button fx:id="returnButton" layoutX="24.0" layoutY="366.0" onAction="#handleReturnButtonAction"  mnemonicParsing="false" prefHeight="29.0" prefWidth="185.0" text="Return" />
+
+            </children>
+        </AnchorPane>
+
+    </children>
+
+    <!--end-->
+</AnchorPane>

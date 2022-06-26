@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+<!--beginning-->
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.NumberAxis?>
+
+<!--this FXML is for the panel with the equation choice buttons. from here every equation-choice-button initiates the graph FXML to create a new window with the graph itself -->
+
+<AnchorPane maxHeight="400.0" maxWidth="600.0" minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" styleClass="root" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="group.mathinfo.ChoiceButtonsController">
+
+
+    <children>
+        <!--buttons-->
+        <AnchorPane layoutX="416.0" minHeight="0.0" minWidth="0.0" prefHeight="400.0" prefWidth="185.0">
+            <children>
+                <!--function buttons-->
+                <VBox prefHeight="398.0" prefWidth="183.0">
+                    <children>
+                        <Button fx:id="graph1ButtonChoice" mnemonicParsing="false" onAction="#handleChooseGraph1Action" prefHeight="66.0" prefWidth="193.0" text="Diocles Cissoid" />
+                        <Button fx:id="graph2ButtonChoice" mnemonicParsing="false" onAction="#handleChooseGraph2Action" prefHeight="66.0" prefWidth="207.0" text="Archimedean Spiral" />
+                        <Button fx:id="graph3ButtonChoice" mnemonicParsing="false" onAction="#handleChooseGraph3Action" prefHeight="67.0" prefWidth="220.0" text="Graph 3" />
+                        <Button fx:id="graph4ButtonChoice" mnemonicParsing="false" onAction="#handleChooseGraph4Action" prefHeight="67.0" prefWidth="232.0" text="Graph 4" />
+                        <Button fx:id="graph5ButtonChoice" mnemonicParsing="false" onAction="#handleChooseGraph5Action" prefHeight="67.0" prefWidth="236.0" text="Graph 5" />
+
+
+                    </children>
+                </VBox>
+
+
+            </children>
+        </AnchorPane>
+
+        <Button fx:id="returnButton" layoutX="24.0" layoutY="350.0" onAction="#handleReturnButtonAction"  mnemonicParsing="false" prefHeight="29.0" prefWidth="150.0" text="Return" />
+
+    </children>
+
+
+
+</AnchorPane>
+
+

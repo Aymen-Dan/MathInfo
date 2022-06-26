@@ -5,9 +5,15 @@ import graph.maths.Graph2_ASpiral;
 import graph.maths.MyGraph;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.chart.AreaChart;
 import javafx.scene.control.Button;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -43,17 +49,9 @@ public class Controller implements Initializable {
 
 
 
-   /* @FXML
-    private LineChart<Double, Double> lineGraph;*/
 
     @FXML
     private AreaChart<Double, Double> areaGraph;
-
-   /* @FXML
-    private Button lineGraphButton;*/
-
-    @FXML
-    private Button areaGraphButton;
 
     @FXML
     private Button graph1Button;
@@ -76,7 +74,7 @@ public class Controller implements Initializable {
     @FXML
     private Button clearButton;
 
-    //private MyGraph mathsGraph;
+
     private MyGraph areaMathsGraph;
 
     @Override
@@ -85,16 +83,9 @@ public class Controller implements Initializable {
         areaMathsGraph = new MyGraph(areaGraph, 10);
     }
 
-   /* @FXML
-    private void handleLineGraphButtonAction(final ActionEvent event) {
-        lineGraph.setVisible(true);
-        areaGraph.setVisible(false);
-    }*/
 
-    @FXML
-    private void handleAreaGraphButtonAction(final ActionEvent event) {
-        areaGraph.setVisible(true);
-       // lineGraph.setVisible(false);
+    private void plotLine(Function<Double, Double> function) {
+        areaMathsGraph.plotLine(function);
     }
 
     @FXML
@@ -102,15 +93,6 @@ public class Controller implements Initializable {
         plotLine(x -> x);
     }
 
-    private void plotLine(Function<Double, Double> function) {
-       /* if (lineGraph.isVisible()) {
-            mathsGraph.plotLine(function);
-        } else {
-            areaMathsGraph.plotLine(function);
-        }*/
-
-        areaMathsGraph.plotLine(function);
-    }
 
     @FXML
     private void handleGraph2ButtonAction(final ActionEvent event) {
