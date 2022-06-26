@@ -9,7 +9,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.chart.AreaChart;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.TextArea;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 
@@ -55,16 +55,8 @@ public class Graph1Controller implements Initializable {
     private Button graph1Button;
 
     @FXML
-    private Button graph2Button;
+    private Button infoButton;
 
-    @FXML
-    private Button graph3Button;
-
-    @FXML
-    private Button graph4Button;
-
-    @FXML
-    private Button graph5Button;
 
     @FXML
     private Button returnButton;
@@ -72,24 +64,20 @@ public class Graph1Controller implements Initializable {
     @FXML
     private Button clearButton;
 
-
     private MyGraph areaMathsGraph;
-
     @FXML
     private Label label1;
     @FXML
+    private TextArea textArea1;
+
+    @FXML
     private Label label2;
+    @FXML
+    private TextArea textArea2;
+
 
     @FXML
     private HBox hb;
-
-    private void createLabel1(){
-        label1 = new Label("Name:");
-        TextField textField = new TextField ();
-        HBox hb = new HBox();
-        hb.getChildren().addAll(label1, textField);
-        hb.setSpacing(10);
-    }
 
     @Override
     public void initialize(final URL url, final ResourceBundle rb) {
@@ -109,22 +97,7 @@ public class Graph1Controller implements Initializable {
 
 
     @FXML
-    private void handleGraph2ButtonAction(final ActionEvent event) {
-       // plotLine(x -> x - 3);
-    }
-
-    @FXML
-    private void handleGraph3ButtonAction(final ActionEvent event) {
-
-    }
-
-    @FXML
-    private void handleGraph4ButtonAction(final ActionEvent event) {
-
-    }
-
-    @FXML
-    private void handleGraph5ButtonAction(final ActionEvent event) {
+    private void handleInfoButtonAction(final ActionEvent event) {
 
     }
 
