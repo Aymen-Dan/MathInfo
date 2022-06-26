@@ -11,7 +11,7 @@
 <?import javafx.scene.chart.NumberAxis?>
 
 
-<AnchorPane fx:id="rootPane"  maxHeight="400.0" maxWidth="600.0" minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" styleClass="root" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="group.mathinfo.GraphController">
+<AnchorPane fx:id="rootPane"  maxHeight="400.0" maxWidth="600.0" minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" styleClass="root" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="group.mathinfo.Graph1Controller">
 
 
     <children>
@@ -39,12 +39,12 @@
                         <!--function buttons-->
                         <VBox prefHeight="398.0" prefWidth="183.0">
                             <children>
-                                <Button fx:id="graph1Button" mnemonicParsing="false" onAction="#handleGraph1ButtonAction" prefHeight="66.0" prefWidth="193.0" text="button1" />
-                                <Button fx:id="graph2Button" mnemonicParsing="false" onAction="#handleGraph1ButtonAction" prefHeight="66.0" prefWidth="207.0" text="button2" />
-                                <Button fx:id="graph3Button" mnemonicParsing="false" onAction="#handleGraph1ButtonAction" prefHeight="67.0" prefWidth="220.0" text="button3" />
-                                <Button fx:id="graph4Button" mnemonicParsing="false" onAction="#handleGraph1ButtonAction" prefHeight="67.0" prefWidth="232.0" text="button4" />
-                                <Button fx:id="graph5Button" mnemonicParsing="false" onAction="#handleGraph1ButtonAction" prefHeight="67.0" prefWidth="236.0" text="button5" />
-
+                                <Button fx:id="graph1Button" mnemonicParsing="false" onAction="#handleGraph1ButtonAction" prefHeight="66.0" prefWidth="193.0" text="Draw graph" />
+                                <Button fx:id="graph2Button" mnemonicParsing="false" onAction="#handleGraph2ButtonAction" prefHeight="66.0" prefWidth="207.0" text="Information" />
+                                <Label fx:id="label1" mnemonicParsing="false" prefHeight="67.0" prefWidth="110.0" text="label1" />
+                               <!-- <Button fx:id="graph4Button" mnemonicParsing="false" onAction="#handleGraph4ButtonAction" prefHeight="67.0" prefWidth="232.0" text="button4" />
+                                <Button fx:id="graph5Button" mnemonicParsing="false" onAction="#handleGraph5ButtonAction" prefHeight="67.0" prefWidth="236.0" text="button5" />
+-->
 
                             </children>
                         </VBox>

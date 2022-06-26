@@ -8,13 +8,16 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.chart.AreaChart;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.HBox;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.function.Function;
 
-public class GraphController implements Initializable {
+public class Graph1Controller implements Initializable {
 
     private void Graph1(double x, double constant) {
         new Graph1_();
@@ -71,6 +74,22 @@ public class GraphController implements Initializable {
 
 
     private MyGraph areaMathsGraph;
+
+    @FXML
+    private Label label1;
+    @FXML
+    private Label label2;
+
+    @FXML
+    private HBox hb;
+
+    private void createLabel1(){
+        label1 = new Label("Name:");
+        TextField textField = new TextField ();
+        HBox hb = new HBox();
+        hb.getChildren().addAll(label1, textField);
+        hb.setSpacing(10);
+    }
 
     @Override
     public void initialize(final URL url, final ResourceBundle rb) {
