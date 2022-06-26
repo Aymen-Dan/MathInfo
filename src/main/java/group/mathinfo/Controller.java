@@ -7,9 +7,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.chart.AreaChart;
-import javafx.scene.chart.LineChart;
 import javafx.scene.control.Button;
-import javafx.scene.layout.AnchorPane;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -45,109 +43,112 @@ public class Controller implements Initializable {
 
 
 
-    @FXML
-    private LineChart<Double, Double> lineGraph;
+   /* @FXML
+    private LineChart<Double, Double> lineGraph;*/
 
     @FXML
     private AreaChart<Double, Double> areaGraph;
 
-    @FXML
-    private Button lineGraphButton;
+   /* @FXML
+    private Button lineGraphButton;*/
 
     @FXML
     private Button areaGraphButton;
 
     @FXML
-    private Button xyButton;
+    private Button graph1Button;
 
     @FXML
-    private Button xyButton2;
+    private Button graph2Button;
 
     @FXML
-    private Button squaredButton;
+    private Button graph3Button;
 
     @FXML
-    private Button squaredButton2;
+    private Button graph4Button;
 
     @FXML
-    private Button cubedButton;
+    private Button graph5Button;
 
     @FXML
-    private Button cubedButton2;
+    private Button returnButton;
 
     @FXML
     private Button clearButton;
 
-    private MyGraph mathsGraph;
+    //private MyGraph mathsGraph;
     private MyGraph areaMathsGraph;
 
     @Override
     public void initialize(final URL url, final ResourceBundle rb) {
-        mathsGraph = new MyGraph(lineGraph, 10);
+      //  mathsGraph = new MyGraph(lineGraph, 10);
         areaMathsGraph = new MyGraph(areaGraph, 10);
     }
 
-    @FXML
+   /* @FXML
     private void handleLineGraphButtonAction(final ActionEvent event) {
         lineGraph.setVisible(true);
         areaGraph.setVisible(false);
-    }
+    }*/
 
     @FXML
     private void handleAreaGraphButtonAction(final ActionEvent event) {
         areaGraph.setVisible(true);
-        lineGraph.setVisible(false);
+       // lineGraph.setVisible(false);
     }
 
     @FXML
-    private void handleXYButtonAction(final ActionEvent event) {
+    private void handleGraph1ButtonAction(final ActionEvent event) {
         plotLine(x -> x);
     }
 
     private void plotLine(Function<Double, Double> function) {
-        if (lineGraph.isVisible()) {
+       /* if (lineGraph.isVisible()) {
             mathsGraph.plotLine(function);
         } else {
             areaMathsGraph.plotLine(function);
-        }
+        }*/
+
+        areaMathsGraph.plotLine(function);
     }
 
     @FXML
-    private void handleXYButton2Action(final ActionEvent event) {
-        plotLine(x -> x - 3);
+    private void handleGraph2ButtonAction(final ActionEvent event) {
+       // plotLine(x -> x - 3);
     }
 
     @FXML
-    private void handleSquaredButtonAction(final ActionEvent event) {
-        plotLine(x -> Math.pow(x, 2));
+    private void handleGraph3ButtonAction(final ActionEvent event) {
+
     }
 
     @FXML
-    private void handleSquaredButton2Action(final ActionEvent event) {
-        plotLine(x -> Math.pow(x, 2) + 2);
+    private void handleGraph4ButtonAction(final ActionEvent event) {
+
     }
 
     @FXML
-    private void handleCubedButtonAction(final ActionEvent event) {
-        plotLine(x -> Math.pow(x, 3));
-    }
+    private void handleGraph5ButtonAction(final ActionEvent event) {
 
-    @FXML
-    private void handleCubedButton2Action(final ActionEvent event) {
-        plotLine(x -> Math.pow(x - 3, 3) - 1);
     }
 
     @FXML
     private void handleClearButtonAction(final ActionEvent event) {
         clear();
     }
+    @FXML
+    private void handleReturnButtonAction(final ActionEvent event) {
+
+    }
 
     private void clear() {
-        if (lineGraph.isVisible()) {
+       /* if (lineGraph.isVisible()) {
             mathsGraph.clear();
         } else {
             areaMathsGraph.clear();
-        }
+        }*/
+        areaMathsGraph.clear();
+
     }
 }
 
