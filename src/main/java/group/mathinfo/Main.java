@@ -22,7 +22,7 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         try {
-            Parent root = FXMLLoader.load(Main.class.getResource("buttonChoice.fxml"));
+            Parent root = FXMLLoader.load(Main.class.getResource("titleWindow.fxml"));
             stage.setScene(new Scene(root));
             stage.setTitle("JavaFX Graph Example");
             stage.show();
