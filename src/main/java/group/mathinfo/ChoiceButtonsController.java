@@ -15,6 +15,8 @@ import java.util.function.Function;
 public class ChoiceButtonsController implements Initializable {
 
     @FXML
+    private AnchorPane rootPane;
+    @FXML
     private Button graph1ButtonChoice;
 
     @FXML
@@ -29,17 +31,14 @@ public class ChoiceButtonsController implements Initializable {
     @FXML
     private Button graph5ButtonChoice;
 
-
-private void callGraph() {
-    try {
-        AnchorPane pane = FXMLLoader.load(getClass().getResource("graph.fxml"));
-    } catch (IOException e) {
-        throw new RuntimeException(e);
-    }
-}
     @FXML
-    private void handleChooseGraph1Action(final ActionEvent event) {
-
+    private void callGraph() throws IOException {
+            AnchorPane pane = FXMLLoader.load(getClass().getResource("graph.fxml"));
+            rootPane.getChildren().setAll(pane);
+    }
+    @FXML
+    private void handleChooseGraph1Action(final ActionEvent event) throws IOException {
+        callGraph();
     }
     @FXML
     private void handleChooseGraph2Action(final ActionEvent event) {
