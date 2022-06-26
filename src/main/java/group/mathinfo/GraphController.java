@@ -5,21 +5,16 @@ import graph.maths.Graph2_ASpiral;
 import graph.maths.MyGraph;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.chart.AreaChart;
 import javafx.scene.control.Button;
-import javafx.stage.Modality;
-import javafx.stage.Stage;
-import javafx.stage.StageStyle;
+import javafx.scene.layout.AnchorPane;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.function.Function;
 
-public class Controller implements Initializable {
+public class GraphController implements Initializable {
 
     private void Graph1(double x, double constant) {
         new Graph1_();
@@ -46,8 +41,8 @@ public class Controller implements Initializable {
     }
 
 
-
-
+    @FXML
+    private AnchorPane rootPane;
 
 
     @FXML
