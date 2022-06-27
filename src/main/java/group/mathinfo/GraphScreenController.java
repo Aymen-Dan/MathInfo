@@ -7,7 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.chart.AreaChart;
+import javafx.scene.chart.LineChart;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -24,7 +24,7 @@ public class GraphScreenController implements Initializable {
 
 
     @FXML
-    private AreaChart<Double, Double> areaGraph;
+    private LineChart<Double, Double> lineGraph;
 
     @FXML
     private Button graph1Button;
@@ -61,12 +61,12 @@ public class GraphScreenController implements Initializable {
 
     @Override
     public void initialize(final URL url, final ResourceBundle rb) {
-        areaMathsGraph = new MyGraph(areaGraph, 10);
+        areaMathsGraph = new MyGraph(lineGraph, 10);
     }
 
 
     private void plotLine(Function<Double, Double> function) {
-        areaMathsGraph.plotLine(function);
+        areaMathsGraph.plotLine1(function, 2);
     }
 
     @FXML
