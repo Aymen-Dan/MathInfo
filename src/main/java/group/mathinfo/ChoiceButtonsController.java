@@ -13,12 +13,14 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-import java.util.function.Function;
 
 public class ChoiceButtonsController implements Initializable {
 
     @FXML
     private AnchorPane rootPane;
+
+
+
     @FXML
     private Button graph1ButtonChoice;
 
@@ -35,29 +37,54 @@ public class ChoiceButtonsController implements Initializable {
     private Button graph5ButtonChoice;
 
     @FXML
-    private void callGraph() throws IOException {
+    private void callGraph1() throws IOException {
             AnchorPane pane = FXMLLoader.load(getClass().getResource("graph1.fxml"));
+
             rootPane.getChildren().setAll(pane);
     }
     @FXML
+    private void callGraph2() throws IOException {
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("graph2.fxml"));
+
+        rootPane.getChildren().setAll(pane);
+    }
+    @FXML
+    private void callGraph3() throws IOException {
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("graph3.fxml"));
+
+        rootPane.getChildren().setAll(pane);
+    }
+    @FXML
+    private void callGraph4() throws IOException {
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("graph4.fxml"));
+
+        rootPane.getChildren().setAll(pane);
+    }
+    @FXML
+    private void callGraph5() throws IOException {
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("graph5.fxml"));
+
+        rootPane.getChildren().setAll(pane);
+    }
+    @FXML
     private void handleChooseGraph1Action(final ActionEvent event) throws IOException {
-        callGraph();
+        callGraph1();
     }
     @FXML
-    private void handleChooseGraph2Action(final ActionEvent event) {
-
+    private void handleChooseGraph2Action(final ActionEvent event) throws IOException {
+     callGraph2();
     }
     @FXML
-    private void handleChooseGraph3Action(final ActionEvent event) {
-
+    private void handleChooseGraph3Action(final ActionEvent event) throws IOException {
+        callGraph3();
     }
     @FXML
-    private void handleChooseGraph4Action(final ActionEvent event) {
-
+    private void handleChooseGraph4Action(final ActionEvent event) throws IOException {
+        callGraph4();
     }
     @FXML
-    private void handleChooseGraph5Action(final ActionEvent event) {
-
+    private void handleChooseGraph5Action(final ActionEvent event)  throws IOException {
+        callGraph5();
     }
     //return button action
     @FXML

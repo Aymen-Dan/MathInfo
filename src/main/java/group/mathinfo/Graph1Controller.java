@@ -1,7 +1,5 @@
 package group.mathinfo;
 
-import graph.maths.Graph1_;
-import graph.maths.Graph2_ASpiral;
 import graph.maths.MyGraph;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -13,6 +11,7 @@ import javafx.scene.chart.AreaChart;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.Modality;
@@ -25,33 +24,6 @@ import java.util.function.Function;
 
 public class Graph1Controller implements Initializable {
 
-    private void Graph1(double x, double constant) {
-        new Graph1_();
-    }
-
-
-    private void Graph2(){
-      new Graph2_ASpiral();
-    }
-
-    private double calculateY_Graph3(){
-
-        return 0;
-    }
-
-    private double calculateY_Graph4(){
-
-        return 0;
-    }
-
-    private double calculateY_Graph5(){
-
-        return 0;
-    }
-
-
-    @FXML
-    private AnchorPane rootPane;
 
 
     @FXML
@@ -71,23 +43,19 @@ public class Graph1Controller implements Initializable {
     private Button clearButton;
 
     private MyGraph areaMathsGraph;
+
     @FXML
     private Label label1;
     @FXML
-    private TextArea textArea1;
+    private TextField textField1;
 
     @FXML
     private Label label2;
     @FXML
-    private TextArea textArea2;
-
-
-    @FXML
-    private HBox hb;
+    private TextField textField2;
 
     @Override
     public void initialize(final URL url, final ResourceBundle rb) {
-      //  mathsGraph = new MyGraph(lineGraph, 10);
         areaMathsGraph = new MyGraph(areaGraph, 10);
     }
 
@@ -99,6 +67,23 @@ public class Graph1Controller implements Initializable {
     @FXML
     private void handleGraph1ButtonAction(final ActionEvent event) {
         plotLine(x -> x);
+    }
+
+    @FXML
+    private void handleGraph2ButtonAction(final ActionEvent event) {
+        //plotLine(x -> x);
+    }
+    @FXML
+    private void handleGraph3ButtonAction(final ActionEvent event) {
+        //plotLine(x -> x);
+    }
+    @FXML
+    private void handleGraph4ButtonAction(final ActionEvent event) {
+        //plotLine(x -> x);
+    }
+    @FXML
+    private void handleGraph5ButtonAction(final ActionEvent event) {
+        //plotLine(x -> x);
     }
 
 
@@ -124,15 +109,15 @@ public class Graph1Controller implements Initializable {
     }
     @FXML
     private void handleReturnButtonAction(final ActionEvent event) {
-
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(Main.class.getResource("titleWindow.fxml"))));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     private void clear() {
-       /* if (lineGraph.isVisible()) {
-            mathsGraph.clear();
-        } else {
-            areaMathsGraph.clear();
-        }*/
         areaMathsGraph.clear();
 
     }
