@@ -64,31 +64,39 @@ public class GraphScreenController implements Initializable {
         areaMathsGraph = new MyGraph(lineGraph, 10);
     }
 
-
-    private void plotLine(Function<Double, Double> function) {
-        areaMathsGraph.plotLine1(function, 2);
-    }
-
     @FXML
     private void handleGraph1ButtonAction(final ActionEvent event) {
-        plotLine(x -> x);
+        double a = Double.parseDouble(textField1.getText());
+        areaMathsGraph.plotLine1(a);
     }
 
     @FXML
     private void handleGraph2ButtonAction(final ActionEvent event) {
-        //plotLine(x -> x);
+        double a = Double.parseDouble(textField1.getText());
+        //double b = Double.parseDouble(textField1.getText());
+        //areaMathsGraph.plotLine1( a);
+        //areaMathsGraph.plotLine1( b);
     }
     @FXML
     private void handleGraph3ButtonAction(final ActionEvent event) {
-        //plotLine(x -> x);
+        double a = Double.parseDouble(textField1.getText());
+        //double b = Double.parseDouble(textField1.getText());
+        //areaMathsGraph.plotLine1( a);
+        //areaMathsGraph.plotLine1( b);
     }
     @FXML
     private void handleGraph4ButtonAction(final ActionEvent event) {
-        //plotLine(x -> x);
+        double a = Double.parseDouble(textField1.getText());
+        //double b = Double.parseDouble(textField1.getText());
+        //areaMathsGraph.plotLine1( a);
+        //areaMathsGraph.plotLine1( b);
     }
     @FXML
     private void handleGraph5ButtonAction(final ActionEvent event) {
-        //plotLine(x -> x);
+        double a = Double.parseDouble(textField1.getText());
+        //double b = Double.parseDouble(textField1.getText());
+        //areaMathsGraph.plotLine1( a);
+        //areaMathsGraph.plotLine1( b);
     }
 
 

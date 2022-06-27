@@ -25,14 +25,13 @@ public class MyGraph {
 
 
     /**A more complicated plotLine method. Use it for both the X and the Y, use parameters as x and z.*/
-    public void plotLine1(final Function<Double, Double> function, final double paramA) {
+    public void plotLine1(final double paramA) {
 /* //translate paramB to radians
         final double bInRad = paramB * PI / 180;
         //use a and b to calculate graph1 x
         final double x = 2*paramA*Math.pow(Math.sin(bInRad), 2);
         //use a and b to calculate graph1 y
         final double y = (2 * paramA * Math.pow(Math.sin(bInRad),3))/Math.cos(bInRad);*/
-        final XYChart.Series<Double, Double> series = new XYChart.Series<Double, Double>();
         XYChart.Series<Double, Double> seriesPositive = new XYChart.Series<>();
         for(double x = -range; x <= range; x = x + 0.01) {
             seriesPositive.getData().add(new XYChart.Data<>(x, calculateY(x, paramA)));
