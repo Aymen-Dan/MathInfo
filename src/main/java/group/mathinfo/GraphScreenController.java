@@ -17,7 +17,6 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-import java.util.function.Function;
 
 public class GraphScreenController implements Initializable {
 
@@ -73,8 +72,7 @@ public class GraphScreenController implements Initializable {
     @FXML
     private void handleGraph2ButtonAction(final ActionEvent event) {
         double a = Double.parseDouble(textField1.getText());
-        //double b = Double.parseDouble(textField1.getText());
-        //areaMathsGraph.plotLine1( a);
+        areaMathsGraph.plotLine2( a);
         //areaMathsGraph.plotLine1( b);
     }
     @FXML

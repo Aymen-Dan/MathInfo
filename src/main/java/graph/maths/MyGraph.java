@@ -2,10 +2,6 @@ package graph.maths;
 
 import javafx.scene.chart.XYChart;
 
-import java.util.function.Function;
-
-import static java.lang.Math.PI;
-
 public class MyGraph {
 
     private XYChart<Double, Double> graph;
@@ -19,28 +15,43 @@ public class MyGraph {
 
 
 
-    private double calculateY(double x, double constant) {
+    private double calculateY1(double x, double constant) {
         return Math.sqrt(Math.pow(x, 3) / (constant - x));
     }
 
 
-    /**A more complicated plotLine method. Use it for both the X and the Y, use parameters as x and z.*/
+    /**Diocles Cissoid*/
     public void plotLine1(final double paramA) {
-/* //translate paramB to radians
-        final double bInRad = paramB * PI / 180;
-        //use a and b to calculate graph1 x
-        final double x = 2*paramA*Math.pow(Math.sin(bInRad), 2);
-        //use a and b to calculate graph1 y
-        final double y = (2 * paramA * Math.pow(Math.sin(bInRad),3))/Math.cos(bInRad);*/
         XYChart.Series<Double, Double> seriesPositive = new XYChart.Series<>();
         for(double x = -range; x <= range; x = x + 0.01) {
-            seriesPositive.getData().add(new XYChart.Data<>(x, calculateY(x, paramA)));
+            seriesPositive.getData().add(new XYChart.Data<>(x, calculateY1(x, paramA)));
         }
         graph.getData().add(seriesPositive);
 
         XYChart.Series<Double, Double> seriesNegative = new XYChart.Series<>();
         for(double x = -range; x <= range; x = x + 0.01) {
-            seriesNegative.getData().add(new XYChart.Data<>(x, -calculateY(x, paramA)));
+            seriesNegative.getData().add(new XYChart.Data<>(x, -calculateY1(x, paramA)));
+        }
+        graph.getData().add(seriesNegative);
+    }
+
+
+    private double calculateY2(double x, double constant) {
+        return Math.sqrt(Math.sqrt(Math.pow(constant,4)+4*Math.pow(x,2)*Math.pow(constant,2)) - Math.pow(x, 2) - Math.pow(constant, 2));
+    }
+
+    /**Lemniscate of Bernoulli*/
+    public void plotLine2(final double paramA){
+
+        XYChart.Series<Double, Double> seriesPositive = new XYChart.Series<>();
+        for(double x = -range; x <= range; x = x + 0.01) {
+            seriesPositive.getData().add(new XYChart.Data<>(x, calculateY2(x, paramA)));
+        }
+        graph.getData().add(seriesPositive);
+
+        XYChart.Series<Double, Double> seriesNegative = new XYChart.Series<>();
+        for(double x = -range; x <= range; x = x + 0.01) {
+            seriesPositive.getData().add(new XYChart.Data<>(x, -calculateY2(x, paramA)));
         }
         graph.getData().add(seriesNegative);
     }
