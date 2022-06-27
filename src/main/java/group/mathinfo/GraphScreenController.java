@@ -10,10 +10,7 @@ import javafx.scene.Scene;
 import javafx.scene.chart.AreaChart;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.HBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
@@ -22,7 +19,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.function.Function;
 
-public class Graph1Controller implements Initializable {
+public class GraphScreenController implements Initializable {
 
 
 
@@ -111,7 +108,7 @@ public class Graph1Controller implements Initializable {
     private void handleReturnButtonAction(final ActionEvent event) {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         try {
-            stage.setScene(new Scene(FXMLLoader.load(Main.class.getResource("titleWindow.fxml"))));
+            stage.setScene(new Scene(FXMLLoader.load(Main.class.getResource("buttonChoice.fxml"))));
         } catch (IOException e) {
             e.printStackTrace();
         }
