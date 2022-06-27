@@ -7,6 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+
 import javafx.scene.chart.LineChart;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -46,7 +47,7 @@ public class GraphScreenController implements Initializable {
     @FXML
     private Button clearButton;
 
-    private MyGraph areaMathsGraph;
+    private MyGraph lineMathsGraph;
 
     @FXML
     private Label label1;
@@ -60,27 +61,27 @@ public class GraphScreenController implements Initializable {
 
     @Override
     public void initialize(final URL url, final ResourceBundle rb) {
-        areaMathsGraph = new MyGraph(lineGraph, 10);
+        lineMathsGraph = new MyGraph(lineGraph, 10);
     }
 
     @FXML
     private void handleGraph1ButtonAction(final ActionEvent event) {
         double a = Double.parseDouble(textField1.getText());
-        areaMathsGraph.plotLine1(a);
+        lineMathsGraph.plotLine1(a);
     }
 
     @FXML
     private void handleGraph2ButtonAction(final ActionEvent event) {
         double a = Double.parseDouble(textField1.getText());
-        areaMathsGraph.plotLine2( a);
-        //areaMathsGraph.plotLine1( b);
+        lineMathsGraph.plotLine2(a);
+
     }
     @FXML
     private void handleGraph3ButtonAction(final ActionEvent event) {
         double a = Double.parseDouble(textField1.getText());
-        //double b = Double.parseDouble(textField1.getText());
-        //areaMathsGraph.plotLine1( a);
-        //areaMathsGraph.plotLine1( b);
+        double b = Double.parseDouble(textField1.getText());
+        lineMathsGraph.plotLine3(a,b);
+
     }
     @FXML
     private void handleGraph4ButtonAction(final ActionEvent event) {
@@ -129,7 +130,7 @@ public class GraphScreenController implements Initializable {
     }
 
     private void clear() {
-        areaMathsGraph.clear();
+        lineMathsGraph.clear();
 
     }
 }

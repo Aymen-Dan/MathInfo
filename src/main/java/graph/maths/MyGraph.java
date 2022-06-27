@@ -42,16 +42,36 @@ public class MyGraph {
 
     /**Lemniscate of Bernoulli*/
     public void plotLine2(final double paramA){
-
         XYChart.Series<Double, Double> seriesPositive = new XYChart.Series<>();
         for(double x = -range; x <= range; x = x + 0.01) {
             seriesPositive.getData().add(new XYChart.Data<>(x, calculateY2(x, paramA)));
         }
         graph.getData().add(seriesPositive);
 
+
         XYChart.Series<Double, Double> seriesNegative = new XYChart.Series<>();
         for(double x = -range; x <= range; x = x + 0.01) {
-            seriesPositive.getData().add(new XYChart.Data<>(x, -calculateY2(x, paramA)));
+            seriesNegative.getData().add(new XYChart.Data<>(x, -calculateY2(x, paramA)));
+        }
+        graph.getData().add(seriesNegative);
+    }
+
+    private double calculateY3(double x, double const1, double const2) {
+        return 0;
+    }
+    /**Logarithmic spiral*/
+    public void plotLine3(final double paramA,final double paramB){
+        //x
+        XYChart.Series<Double, Double> seriesPositive = new XYChart.Series<>();
+        for(double x = -range; x <= range; x = x + 0.01) {
+            seriesPositive.getData().add(new XYChart.Data<>(x, calculateY3(x, paramA, paramB)));
+        }
+        graph.getData().add(seriesPositive);
+
+        //y
+        XYChart.Series<Double, Double> seriesNegative = new XYChart.Series<>();
+        for(double x = -range; x <= range; x = x + 0.01) {
+           // seriesNegative.getData().add(new XYChart.Data<>(x, -calculateY3(x, paramA, paramB)));
         }
         graph.getData().add(seriesNegative);
     }
