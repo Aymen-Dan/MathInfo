@@ -32,23 +32,23 @@
                         <Cursor fx:constant="CROSSHAIR" />
                     </cursor>
                 </AreaChart>
-
-                <!--clear and return buttons-->
-                <Button fx:id="clearButton" layoutX="224.0" layoutY="366.0" mnemonicParsing="false" onAction="#handleClearButtonAction" prefHeight="29.0" prefWidth="185.0" text="Clear" />
                 <Button fx:id="returnButton" layoutX="24.0" layoutY="366.0" mnemonicParsing="false" onAction="#handleReturnButtonAction" prefHeight="29.0" prefWidth="185.0" text="Return" />
+
                 <AnchorPane layoutX="416.0" minHeight="0.0" minWidth="0.0" prefHeight="400.0" prefWidth="185.0">
                     <children>
-                  <GridPane layoutX="10.0" layoutY="76.0" prefHeight="30.0" prefWidth="162.0">
-                    <columnConstraints>
+                  <GridPane layoutX="10.0" layoutY="220.0" prefHeight="30.0" prefWidth="162.0">
+
+                      <columnConstraints>
                       <ColumnConstraints hgrow="SOMETIMES" maxWidth="87.3333740234375" minWidth="10.0" prefWidth="29.999959309895836" />
                       <ColumnConstraints hgrow="SOMETIMES" maxWidth="148.6666259765625" minWidth="10.0" prefWidth="58.000040690104164" />
                         <ColumnConstraints hgrow="SOMETIMES" maxWidth="148.6666259765625" minWidth="10.0" prefWidth="31.66665649414061" />
                         <ColumnConstraints hgrow="SOMETIMES" maxWidth="148.6666259765625" minWidth="10.0" prefWidth="54.6666259765625" />
-                    </columnConstraints>
+                      </columnConstraints>
                     <rowConstraints>
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
-                     <children>
+
+                      <children>
                         <Label fx:id="label1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="25.0" text="a =">
                            <font>
                               <Font size="16.0" />
@@ -63,19 +63,23 @@
                         <TextField fx:id="textField2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="50.0" GridPane.columnIndex="3" />
                      </children>
                   </GridPane>
-                          <Button fx:id="graph1Button" layoutX="1.0" layoutY="121.0" mnemonicParsing="false" onAction="#handleGraph1ButtonAction" prefHeight="66.0" prefWidth="184.0" text="Draw graph" />
-                          <Button fx:id="infoButton" layoutX="1.0" layoutY="267.0" mnemonicParsing="false" onAction="#handleInfoButtonAction" prefHeight="67.0" prefWidth="183.0" text="Information" />
+                          <Button fx:id="graph4Button" layoutX="23.0" layoutY="266.0" mnemonicParsing="false" onAction="#handleGraph4ButtonAction" prefHeight="54.0" prefWidth="139.0" text="Draw graph" />
+                          <Button fx:id="infoButton" layoutX="23.0" layoutY="89.0" mnemonicParsing="false" onAction="#handleInfoButtonAction" prefHeight="54.0" prefWidth="139.0" text="More information" />
 
-                        <Text layoutX="12.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter parameters:" wrappingWidth="162.13668823242188">
+                        <Text layoutX="11.0" layoutY="199.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter parameters here:" wrappingWidth="162.13668823242188">
                      <font>
-                        <Font size="20.0" />
+                        <Font size="16.0" />
                      </font>
                   </Text>
-                  <Text layoutX="12.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fun information:" wrappingWidth="162.13668823242188">
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="22.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Diocles Cissoid" wrappingWidth="162.0">
                      <font>
-                        <Font size="20.0" />
+                        <Font size="22.0" />
                      </font>
                   </Text>
+      
+                            <!--clear and return buttons-->
+                      <Button fx:id="clearButton" layoutX="23.0" layoutY="332.0" mnemonicParsing="false" onAction="#handleClearButtonAction" prefHeight="54.0" prefWidth="139.0" text="Clear" />
 
 
                     </children>

@@ -28,10 +28,18 @@ public class GraphScreenController implements Initializable {
 
     @FXML
     private Button graph1Button;
+    @FXML
+    private Button graph2Button;
+    @FXML
+    private Button graph3Button;
+    @FXML
+    private Button graph4Button;
+    @FXML
+    private Button graph5Button;
+
 
     @FXML
     private Button infoButton;
-
 
     @FXML
     private Button returnButton;
