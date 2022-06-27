@@ -36,7 +36,7 @@ public class ChoiceButtonsController implements Initializable {
 
     @FXML
     private void callGraph() throws IOException {
-            AnchorPane pane = FXMLLoader.load(getClass().getResource("graph.fxml"));
+            AnchorPane pane = FXMLLoader.load(getClass().getResource("graph1.fxml"));
             rootPane.getChildren().setAll(pane);
     }
     @FXML
