@@ -80,7 +80,8 @@ public class GraphScreenController implements Initializable {
     private void handleGraph3ButtonAction(final ActionEvent event) {
         double a = Double.parseDouble(textField1.getText());
         double b = Double.parseDouble(textField1.getText());
-        lineMathsGraph.plotLine3(a,b);
+        double c = Double.parseDouble(textField1.getText());
+       // lineMathsGraph.plotLine3(a,b,c);
 
     }
     @FXML
@@ -93,9 +94,8 @@ public class GraphScreenController implements Initializable {
     @FXML
     private void handleGraph5ButtonAction(final ActionEvent event) {
         double a = Double.parseDouble(textField1.getText());
-        //double b = Double.parseDouble(textField1.getText());
-        //areaMathsGraph.plotLine1( a);
-        //areaMathsGraph.plotLine1( b);
+        lineMathsGraph.plotLine5( a);
+
     }
 
 
