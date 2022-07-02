@@ -2,6 +2,8 @@ package graph.maths;
 
 import javafx.scene.chart.XYChart;
 
+import java.util.function.Function;
+
 public class MyGraph {
 
     private XYChart<Double, Double> graph;
@@ -78,47 +80,50 @@ public class MyGraph {
     }
 
 
-    private double calculate4(double x, double const1) {
+    private double calculateX(double x, double const1) {
+
+            return const1 * Math.sqrt(Math.toRadians(const1));
+    }
+
+    private double calculateY(double x, double const1) {
         return 0;
     }
     /**Ferma's spiral???*/
     public void plotLine4(final double paramA){
 
-        XYChart.Series<Double, Double> series = new XYChart.Series<>();
+        XYChart.Series<Double, Double> seriesX = new XYChart.Series<>();
         for(double x = -range; x <= range; x = x + 0.01) {
-            series.getData().add(new XYChart.Data<>(x, calculate4(x, paramA)));
+            for(int i = 0; i <360; i+=10) {
+                seriesX.getData().add(new XYChart.Data<>(x, calculateX(x, paramA)));
+            }
         }
-        graph.getData().add(series);
+        graph.getData().add(seriesX);
 
 
-        XYChart.Series<Double, Double> seriesNegative = new XYChart.Series<>();
+        XYChart.Series<Double, Double> seriesY = new XYChart.Series<>();
         for(double x = -range; x <= range; x = x + 0.01) {
-            // seriesNegative.getData().add(new XYChart.Data<>(x, -calculate4(x, paramA, paramB)));
+            // seriesY.getData().add(new XYChart.Data<>(x, -calculateY(x, paramA)));
         }
-        graph.getData().add(seriesNegative);
+        graph.getData().add(seriesY);
     }
 
 
-    private double calculate5(double x, double const1) {
-        return Math.sin(0.99*const1);
+    private double calculate5X(double const1, double const2, double t, double j) {
+        return Math.cos(const1*t)-Math.pow(Math.cos(const2*t),j);
     }
-    /**Graph 14, R(a) = sin(0.99*a) ????????*/
-    public void plotLine5(final double paramA){
-        XYChart.Series<Double, Double> series = new XYChart.Series<>();
-        for(double x = -range; x <= range; x = x + 0.01) {
-           series.getData().add(new XYChart.Data<>(x, calculate5(x, paramA)));
-        }
-        graph.getData().add(series);
-
-
-        /*XYChart.Series<Double, Double> seriesNegative = new XYChart.Series<>();
-        for(double x = -range; x <= range; x = x + 0.01) {
-           // seriesNegative.getData().add(new XYChart.Data<>(x, -calculate5(x, paramA)));
-        }
-        graph.getData().add(seriesNegative);*/
+    private double calculate5Y(double const1, double const2, double t, double k) {
+        return Math.sin(const1*t)-Math.pow(Math.sin(const2*t),k);
     }
+    /**Graph x = cos(a*t) - cos(b*t)^j & y = sin(c*t) - sin(d*t)^k ????????*/
+    public void plotLine5(final double paramA, final double paramB, final double paramC, final double paramD, final double paramJ, final double paramK){
+        XYChart.Series<Double, Double> seriesY = new XYChart.Series<>();
+        for(double T = -range; T <= range; T = T+0.01) {
+            seriesY.getData().add(new XYChart.Data<>(calculate5X(paramA, paramB, T, paramJ), calculate5Y(paramC, paramD, T, paramK)));
+        }
+        graph.getData().add(seriesY);
 
 
+}
     /*public void plotLine(final Function<Double, Double> function) {
         final XYChart.Series<Double, Double> series = new XYChart.Series<Double, Double>();
         for (double x = -range; x <= range; x = x + 0.01) {

@@ -59,6 +59,26 @@ public class GraphScreenController implements Initializable {
     @FXML
     private TextField textField2;
 
+    @FXML
+    private Label label3;
+    @FXML
+    private TextField textField3;
+
+    @FXML
+    private Label label4;
+    @FXML
+    private TextField textField4;
+
+    @FXML
+    private Label label5;
+    @FXML
+    private TextField textField5;
+
+    @FXML
+    private Label label6;
+    @FXML
+    private TextField textField6;
+
     @Override
     public void initialize(final URL url, final ResourceBundle rb) {
         lineMathsGraph = new MyGraph(lineGraph, 10);
@@ -94,7 +114,12 @@ public class GraphScreenController implements Initializable {
     @FXML
     private void handleGraph5ButtonAction(final ActionEvent event) {
         double a = Double.parseDouble(textField1.getText());
-        lineMathsGraph.plotLine5( a);
+        double b = Double.parseDouble(textField2.getText());
+        double c = Double.parseDouble(textField3.getText());
+        double d = Double.parseDouble(textField4.getText());
+        double j = Double.parseDouble(textField5.getText());
+        double k = Double.parseDouble(textField6.getText());
+        lineMathsGraph.plotLine5(a,b,c,d,j,k);
 
     }
 
