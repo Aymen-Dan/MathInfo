@@ -20,7 +20,7 @@
                     <children>
                         <Button fx:id="graph1ButtonChoice" mnemonicParsing="false" onAction="#handleChooseGraph1Action" prefHeight="66.0" prefWidth="193.0" text="Diocles Cissoid" />
                         <Button fx:id="graph2ButtonChoice" mnemonicParsing="false" onAction="#handleChooseGraph2Action" prefHeight="66.0" prefWidth="207.0" text="Bernoulli's Lemniscate" />
-                        <Button fx:id="graph3ButtonChoice" mnemonicParsing="false" onAction="#handleChooseGraph3Action" prefHeight="67.0" prefWidth="220.0" text="Graph 3" />
+                        <Button fx:id="graph3ButtonChoice" mnemonicParsing="false" onAction="#handleChooseGraph3Action" prefHeight="67.0" prefWidth="220.0" text="Fermat's Spiral" />
                         <Button fx:id="graph4ButtonChoice" mnemonicParsing="false" onAction="#handleChooseGraph4Action" prefHeight="67.0" prefWidth="232.0" text="Graph 4" />
                         <Button fx:id="graph5ButtonChoice" mnemonicParsing="false" onAction="#handleChooseGraph5Action" prefHeight="67.0" prefWidth="236.0" text="Graph 5" />
 

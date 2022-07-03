@@ -8,7 +8,10 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 
+import javafx.scene.chart.AreaChart;
 import javafx.scene.chart.LineChart;
+import javafx.scene.chart.NumberAxis;
+import javafx.scene.chart.ScatterChart;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -24,7 +27,10 @@ public class GraphScreenController implements Initializable {
 
 
     @FXML
-    private LineChart<Double, Double> lineGraph;
+    private LineChart<Number, Number> lineGraph;
+
+    @FXML
+    private ScatterChart<Double, Double> scatterGraph;
 
     @FXML
     private Button graph1Button;
@@ -48,6 +54,7 @@ public class GraphScreenController implements Initializable {
     private Button clearButton;
 
     private MyGraph lineMathsGraph;
+    private MyGraph scatterMathGraph;
 
     @FXML
     private Label label1;
@@ -81,8 +88,11 @@ public class GraphScreenController implements Initializable {
 
     @Override
     public void initialize(final URL url, final ResourceBundle rb) {
-        lineMathsGraph = new MyGraph(lineGraph, 10);
+       lineMathsGraph = new MyGraph(lineGraph, 10);
+
+
     }
+
 
     @FXML
     private void handleGraph1ButtonAction(final ActionEvent event) {
@@ -99,17 +109,13 @@ public class GraphScreenController implements Initializable {
     @FXML
     private void handleGraph3ButtonAction(final ActionEvent event) {
         double a = Double.parseDouble(textField1.getText());
-        double b = Double.parseDouble(textField1.getText());
-        double c = Double.parseDouble(textField1.getText());
-       // lineMathsGraph.plotLine3(a,b,c);
+        lineMathsGraph.plotLine3(a);
 
     }
     @FXML
     private void handleGraph4ButtonAction(final ActionEvent event) {
-        double a = Double.parseDouble(textField1.getText());
-        //double b = Double.parseDouble(textField1.getText());
-        //areaMathsGraph.plotLine1( a);
-        //areaMathsGraph.plotLine1( b);
+
+
     }
     @FXML
     private void handleGraph5ButtonAction(final ActionEvent event) {
@@ -119,6 +125,7 @@ public class GraphScreenController implements Initializable {
         double d = Double.parseDouble(textField4.getText());
         double j = Double.parseDouble(textField5.getText());
         double k = Double.parseDouble(textField6.getText());
+
         lineMathsGraph.plotLine5(a,b,c,d,j,k);
 
     }

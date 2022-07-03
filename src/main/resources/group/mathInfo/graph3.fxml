@@ -36,15 +36,11 @@
 
                 <AnchorPane layoutX="416.0" minHeight="0.0" minWidth="0.0" prefHeight="400.0" prefWidth="185.0">
                     <children>
-                  <GridPane layoutX="3.0" layoutY="220.0" prefHeight="30.0" prefWidth="185.0">
+                  <GridPane layoutX="62.0" layoutY="222.0" prefHeight="30.0" prefWidth="61.0">
 
                       <columnConstraints>
                       <ColumnConstraints hgrow="SOMETIMES" maxWidth="87.3333740234375" minWidth="10.0" prefWidth="29.999959309895836" />
                       <ColumnConstraints hgrow="SOMETIMES" maxWidth="148.6666259765625" minWidth="10.0" prefWidth="34.33335367838541" />
-                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="148.6666259765625" minWidth="10.0" prefWidth="31.33338419596354" />
-                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="148.6666259765625" minWidth="10.0" prefWidth="31.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="148.6666259765625" minWidth="10.0" prefWidth="28.333333333333343" />
-                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="148.6666259765625" minWidth="10.0" prefWidth="38.0" />
                       </columnConstraints>
                     <rowConstraints>
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -56,19 +52,7 @@
                               <Font size="16.0" />
                            </font>
                         </Label>
-                        <Label fx:id="label2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="25.0" text="b =" GridPane.columnIndex="2">
-                           <font>
-                              <Font size="16.0" />
-                           </font>
-                        </Label>
                         <TextField fx:id="textField1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="27.0" GridPane.columnIndex="1" />
-                        <TextField fx:id="textField2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="25.0" GridPane.columnIndex="5" />
-                        <Label fx:id="label21" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="25.0" text="c =" GridPane.columnIndex="4">
-                           <font>
-                              <Font size="16.0" />
-                           </font>
-                        </Label>
-                        <TextField fx:id="textField21" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="25.0" GridPane.columnIndex="3" />
                      </children>
                   </GridPane>
                           <Button fx:id="graph3Button" layoutX="23.0" layoutY="266.0" mnemonicParsing="false" onAction="#handleGraph3ButtonAction" prefHeight="54.0" prefWidth="139.0" text="Draw graph" />
@@ -80,7 +64,7 @@
                      </font>
                   </Text>
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-                  <Text layoutX="22.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Star?" wrappingWidth="162.0">
+                  <Text layoutX="22.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fermat's Spiral" wrappingWidth="162.0">
                      <font>
                         <Font size="22.0" />
                      </font>
