@@ -13,16 +13,16 @@ public class Main extends Application {
 
     public static void main(String[] args) {
         launch(args);
-
     }
 
-    //starts with button choice in my case, redo this to suit our actual needs please
+
     @Override
     public void start(Stage stage) throws IOException {
         try {
             Parent root = FXMLLoader.load(Main.class.getResource("titleWindow.fxml"));
             stage.setScene(new Scene(root));
             stage.setTitle("JavaFX Graph Example");
+            stage.setResizable(false);
             stage.show();
         } catch (Exception e) {
             System.out.print(e);

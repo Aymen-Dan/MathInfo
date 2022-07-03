@@ -132,6 +132,7 @@ public class GraphScreenController implements Initializable {
     @FXML
     private void handleGraph1InfoButtonAction(final ActionEvent event) {
         final Stage infoWindow = new Stage();
+        infoWindow.setResizable(false);
         infoWindow.initModality(Modality.NONE);
         infoWindow.initOwner(((Node) event.getSource()).getScene().getWindow());
         FXMLLoader fxmlLoader = new FXMLLoader();
@@ -147,6 +148,7 @@ public class GraphScreenController implements Initializable {
     @FXML
     private void handleGraph2InfoButtonAction(final ActionEvent event) {
         final Stage infoWindow = new Stage();
+        infoWindow.setResizable(false);
         infoWindow.initModality(Modality.NONE);
         infoWindow.initOwner(((Node) event.getSource()).getScene().getWindow());
         FXMLLoader fxmlLoader = new FXMLLoader();
@@ -159,11 +161,15 @@ public class GraphScreenController implements Initializable {
 
         infoWindow.show();
 
-        ((InfoWindowContoller)fxmlLoader.getController()).setContents("Лемніската Бернуллі", "Опис функції");
+        ((InfoWindowContoller)fxmlLoader.getController()).setContents("Лемніската Бернуллі", "Назва походить з античного Риму, де «лемніскатою» називали бантик,\n з допомогою якого прикріпляли вінок до голови переможця на\nспортивних іграх. Цю лемніскату називають в честь швейцарського\nматематика Якоба Бернуллі, який поклав початок її вивченню.\nУ техніці лемніската використовується як перехідна крива під час\nзаокруглення малого" +
+                "радіуса. Наприклад, на залізничних лініях\nв гірській місцевості і на трамвайних шляхах.\n" +
+                "В галузі фізики лемніскатою в окремому випадку є еквіпотенціальні\nлінії поля, які" +
+                "створюються двома паралельними струмами\nпо нескінченно довгих провідниках, у перпендикулярній до них\nплощині.");
     }
     @FXML
     private void handleGraph3InfoButtonAction(final ActionEvent event) {
         final Stage infoWindow = new Stage();
+        infoWindow.setResizable(false);
         infoWindow.initModality(Modality.NONE);
         infoWindow.initOwner(((Node) event.getSource()).getScene().getWindow());
         FXMLLoader fxmlLoader = new FXMLLoader();
@@ -176,11 +182,14 @@ public class GraphScreenController implements Initializable {
 
         infoWindow.show();
 
-        ((InfoWindowContoller)fxmlLoader.getController()).setContents("Спіраль Ферма", "Опис функції");
+        ((InfoWindowContoller)fxmlLoader.getController()).setContents("Спіраль Ферма", "Спіралі постійно зустрічаються у нашому житті. Наприклад, у квітці\nсоняшника група спіралей залягає числами Фібоначчі, оскільки\nдивергенція (кут послідовності в спіралей) прямує до золотого\nвідношення. Форма спіралей залежить від росту послідовних елементів.\nВ зрілій квітці (коли всі елементи мають однаковий розмір) спіралі\nнасіння є спіралями Ферма. Це тому що спіралі Ферма перетинають\nрівня кільця в однакових положеннях.\nТакож із цікавих фактів про спіралі:\nБернуллі (його Лемніската представлена другим графіком) вбачав\nу логарифмічній спіралі символ безкінечного циклу життів,\nі тому побажав, щоб її зобразили на його надгробку. Проте мулярі\nпомилилися, і замість цього зобразили спіраль Архімеда.");
     }
+
     @FXML
     private void handleGraph4InfoButtonAction(final ActionEvent event) {
         final Stage infoWindow = new Stage();
+
+        infoWindow.setResizable(false);
         infoWindow.initModality(Modality.NONE);
         infoWindow.initOwner(((Node) event.getSource()).getScene().getWindow());
         FXMLLoader fxmlLoader = new FXMLLoader();
@@ -195,9 +204,11 @@ public class GraphScreenController implements Initializable {
 
         ((InfoWindowContoller)fxmlLoader.getController()).setContents("Функція", "Опис функції");
     }
+
     @FXML
     private void handleGraph5InfoButtonAction(final ActionEvent event) {
         final Stage infoWindow = new Stage();
+        infoWindow.setResizable(false);
         infoWindow.initModality(Modality.NONE);
         infoWindow.initOwner(((Node) event.getSource()).getScene().getWindow());
         FXMLLoader fxmlLoader = new FXMLLoader();
@@ -215,15 +226,15 @@ public class GraphScreenController implements Initializable {
 
 
 
-
-
     @FXML
     private void handleClearButtonAction(final ActionEvent event) {
         clear();
     }
+
     @FXML
     private void handleReturnButtonAction(final ActionEvent event) {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setResizable(false);
         try {
             stage.setScene(new Scene(FXMLLoader.load(Main.class.getResource("buttonChoice.fxml"))));
         } catch (IOException e) {

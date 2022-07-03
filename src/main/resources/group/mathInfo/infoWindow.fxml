@@ -6,14 +6,17 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="382.0" prefWidth="337.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="group.mathinfo.InfoWindowContoller">
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="380.0" prefWidth="580.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="group.mathinfo.InfoWindowContoller">
    <children>
-      <Separator layoutX="3.0" layoutY="65.0" prefHeight="0.0" prefWidth="329.0" />
-      <Label id="functionNameLabel" fx:id="functionNameLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="9.0" layoutY="14.0" prefHeight="40.0" prefWidth="321.0" textAlignment="CENTER">
+      <Separator layoutX="3.0" layoutY="65.0" prefHeight="0.0" prefWidth="573.0" />
+      <Label id="functionNameLabel" fx:id="functionNameLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="9.0" layoutY="14.0" prefHeight="40.0" prefWidth="563.0" textAlignment="CENTER">
          <font>
             <Font name="Times New Roman" size="36.0" />
          </font>
       </Label>
-      <TextArea id="functionInfoTextArea" fx:id="functionInfoTextArea" editable="false" layoutX="9.0" layoutY="76.0" prefHeight="298.0" prefWidth="321.0" />
+      <TextArea id="functionInfoTextArea" fx:id="functionInfoTextArea" editable="false" layoutX="13.0" layoutY="80.0" maxHeight="298.0" maxWidth="563.0" minHeight="0.0" minWidth="0.0" prefHeight="287.0" prefWidth="553.0">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font></TextArea>
    </children>
 </AnchorPane>

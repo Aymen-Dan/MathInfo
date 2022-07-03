@@ -19,6 +19,7 @@ public class TitleWindowController implements Initializable {
 
     public void functionListBtnAction(ActionEvent actionEvent) {
         Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        stage.setResizable(false);
         try {
             stage.setScene(new Scene(FXMLLoader.load(Main.class.getResource("buttonChoice.fxml"))));
         } catch (IOException e) {
