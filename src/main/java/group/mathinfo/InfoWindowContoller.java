@@ -21,8 +21,7 @@ public class InfoWindowContoller implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
     }
 
-    public void setContents(String name, String info)
-    {
+    public void setContents(String name, String info) {
         functionNameLabel.setText(name);
         functionInfoTextArea.setText(info);
     }

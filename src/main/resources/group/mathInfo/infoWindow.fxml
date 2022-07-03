@@ -6,15 +6,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="350.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="group.mathinfo.InfoWindowContoller">
+<AnchorPane prefHeight="382.0" prefWidth="337.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="group.mathinfo.InfoWindowContoller">
    <children>
-      <Separator layoutY="66.0" prefHeight="3.0" prefWidth="300.0" />
-      <Label fx:id="functionNameLabel" id="functionNameLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="9.0" layoutY="14.0" prefHeight="40.0" prefWidth="281.0" textAlignment="CENTER">
+      <Separator layoutX="3.0" layoutY="65.0" prefHeight="0.0" prefWidth="329.0" />
+      <Label id="functionNameLabel" fx:id="functionNameLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="9.0" layoutY="14.0" prefHeight="40.0" prefWidth="321.0" textAlignment="CENTER">
          <font>
             <Font name="Times New Roman" size="36.0" />
          </font>
       </Label>
-      <TextArea fx:id="functionInfoTextArea" editable="false" id="functionInfoTextArea" layoutX="9.0" layoutY="76.0" prefHeight="266.0" prefWidth="282.0" />
+      <TextArea id="functionInfoTextArea" fx:id="functionInfoTextArea" editable="false" layoutX="9.0" layoutY="76.0" prefHeight="298.0" prefWidth="321.0" />
    </children>
 </AnchorPane>

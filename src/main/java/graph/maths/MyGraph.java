@@ -10,9 +10,7 @@ public class MyGraph {
     private double range;
 
     public MyGraph(final LineChart<Number, Number> lineGraph, final double range) {
-
          this.lineGraph = lineGraph;
-
         this.range = range;
     }
 

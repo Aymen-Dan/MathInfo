@@ -55,7 +55,7 @@
                      </children>
                   </GridPane>
                           <Button fx:id="graph1Button" layoutX="23.0" layoutY="266.0" mnemonicParsing="false" onAction="#handleGraph1ButtonAction" prefHeight="54.0" prefWidth="139.0" text="Draw graph" />
-                          <Button fx:id="infoButton" layoutX="23.0" layoutY="89.0" mnemonicParsing="false" onAction="#handleInfoButtonAction" prefHeight="54.0" prefWidth="139.0" text="More information" />
+                          <Button fx:id="infoButton" layoutX="23.0" layoutY="89.0" mnemonicParsing="false" onAction="#handleGraph1InfoButtonAction" prefHeight="54.0" prefWidth="139.0" text="More information" />
 
                         <Text layoutX="11.0" layoutY="199.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter parameters here:" wrappingWidth="162.13668823242188">
                      <font>

@@ -8,9 +8,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 
-import javafx.scene.chart.AreaChart;
 import javafx.scene.chart.LineChart;
-import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.ScatterChart;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -54,7 +52,7 @@ public class GraphScreenController implements Initializable {
     private Button clearButton;
 
     private MyGraph lineMathsGraph;
-    private MyGraph scatterMathGraph;
+
 
     @FXML
     private Label label1;
@@ -132,7 +130,7 @@ public class GraphScreenController implements Initializable {
 
 
     @FXML
-    private void handleInfoButtonAction(final ActionEvent event) {
+    private void handleGraph1InfoButtonAction(final ActionEvent event) {
         final Stage infoWindow = new Stage();
         infoWindow.initModality(Modality.NONE);
         infoWindow.initOwner(((Node) event.getSource()).getScene().getWindow());
@@ -144,8 +142,80 @@ public class GraphScreenController implements Initializable {
             e.printStackTrace();
         }
         infoWindow.show();
+        ((InfoWindowContoller)fxmlLoader.getController()).setContents("Цисоїда Діокла", "Опис функції");
+    }
+    @FXML
+    private void handleGraph2InfoButtonAction(final ActionEvent event) {
+        final Stage infoWindow = new Stage();
+        infoWindow.initModality(Modality.NONE);
+        infoWindow.initOwner(((Node) event.getSource()).getScene().getWindow());
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        try {
+            infoWindow.setScene(new Scene(fxmlLoader.load(getClass().getResource("infoWindow.fxml").openStream())));
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        infoWindow.show();
+
+        ((InfoWindowContoller)fxmlLoader.getController()).setContents("Лемніската Бернуллі", "Опис функції");
+    }
+    @FXML
+    private void handleGraph3InfoButtonAction(final ActionEvent event) {
+        final Stage infoWindow = new Stage();
+        infoWindow.initModality(Modality.NONE);
+        infoWindow.initOwner(((Node) event.getSource()).getScene().getWindow());
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        try {
+            infoWindow.setScene(new Scene(fxmlLoader.load(getClass().getResource("infoWindow.fxml").openStream())));
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        infoWindow.show();
+
+        ((InfoWindowContoller)fxmlLoader.getController()).setContents("Спіраль Ферма", "Опис функції");
+    }
+    @FXML
+    private void handleGraph4InfoButtonAction(final ActionEvent event) {
+        final Stage infoWindow = new Stage();
+        infoWindow.initModality(Modality.NONE);
+        infoWindow.initOwner(((Node) event.getSource()).getScene().getWindow());
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        try {
+            infoWindow.setScene(new Scene(fxmlLoader.load(getClass().getResource("infoWindow.fxml").openStream())));
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        infoWindow.show();
+
         ((InfoWindowContoller)fxmlLoader.getController()).setContents("Функція", "Опис функції");
     }
+    @FXML
+    private void handleGraph5InfoButtonAction(final ActionEvent event) {
+        final Stage infoWindow = new Stage();
+        infoWindow.initModality(Modality.NONE);
+        infoWindow.initOwner(((Node) event.getSource()).getScene().getWindow());
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        try {
+            infoWindow.setScene(new Scene(fxmlLoader.load(getClass().getResource("infoWindow.fxml").openStream())));
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        infoWindow.show();
+
+        ((InfoWindowContoller)fxmlLoader.getController()).setContents("Графік 5", "Опис функції");
+    }
+
+
+
+
 
     @FXML
     private void handleClearButtonAction(final ActionEvent event) {
