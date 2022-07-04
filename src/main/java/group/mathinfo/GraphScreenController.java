@@ -112,28 +112,26 @@ public class GraphScreenController implements Initializable {
     }
     @FXML
     private void handleGraph4ButtonAction(final ActionEvent event) {
-
+        double a = Double.parseDouble(textField1.getText());
+        double b = Double.parseDouble(textField2.getText());
+        lineMathsGraph.plotLine4(a,b);
 
     }
     @FXML
     private void handleGraph5ButtonAction(final ActionEvent event) {
         double a = Double.parseDouble(textField1.getText());
-        double b = Double.parseDouble(textField2.getText());
-        double c = Double.parseDouble(textField3.getText());
-        double d = Double.parseDouble(textField4.getText());
-        double j = Double.parseDouble(textField5.getText());
-        double k = Double.parseDouble(textField6.getText());
+        double c = Double.parseDouble(textField2.getText());
 
-        lineMathsGraph.plotLine5(a,b,c,d,j,k);
+        lineMathsGraph.plotLine5(a,c);
 
     }
 
     @FXML
     private void handleGraph6ButtonAction(final ActionEvent event) {
-        double a = Double.parseDouble(textField1.getText());
+        double b = Double.parseDouble(textField1.getText());
+        double d = Double.parseDouble(textField2.getText());
 
-
-        lineMathsGraph.plotLine6(a);
+        lineMathsGraph.plotLine6(b,d);
 
     }
 
@@ -152,8 +150,9 @@ public class GraphScreenController implements Initializable {
             e.printStackTrace();
         }
         infoWindow.show();
-        ((InfoWindowContoller)fxmlLoader.getController()).setContents("Цисоїда Діокла", "Опис функції");
+        ((InfoWindowContoller)fxmlLoader.getController()).setContents("Цисоїда Діокла", "Вперше цисоїду досліджував грецький математик Діокл у II столітті\nдо н.е. Він будував її за допомогою кола, і графік обмежувався ним.\nЯкщо цю частину цисоїди обмежити правою дугою кола, то виходить\nфігура, що нагадує своєю формою листок плюща. Грецькою\nплющ - χισσος («хіссос»), від чого й походить назва кривої - «цисоїда».\nВ сучасному вигляді цисоїду відтворив французький математик Жиль\nРоберваль у 1640 році. Пізніше її також досліджував голландський\nматематик Слюз.");
     }
+
     @FXML
     private void handleGraph2InfoButtonAction(final ActionEvent event) {
         final Stage infoWindow = new Stage();
@@ -230,7 +229,7 @@ public class GraphScreenController implements Initializable {
 
         infoWindow.show();
 
-        ((InfoWindowContoller)fxmlLoader.getController()).setContents("Графік 5", "Опис функції");
+        ((InfoWindowContoller)fxmlLoader.getController()).setContents("Графік 5", "Цікаве складне параметричне рівняння. В залежності від коефіцієнтів графічне зображення може кардинально змінювати форму. При цьому задля повного розуміння потрібно змінювати коефіцієнти за визначеною закономірністю. Саме тому цьому рівнянню присвячено 2 графічні реалізації, тут та у графіку 6.");
     }
 
     @FXML
@@ -249,7 +248,7 @@ public class GraphScreenController implements Initializable {
 
         infoWindow.show();
 
-        ((InfoWindowContoller)fxmlLoader.getController()).setContents("Графік 5", "Опис функції");
+        ((InfoWindowContoller)fxmlLoader.getController()).setContents("Графік 6", "Цікаве складне параметричне рівняння. В залежності від коефіцієнтів графічне зображення може кардинально змінювати форму. При цьому задля повного розуміння потрібно змінювати коефіцієнти за визначеною закономірністю. Саме тому цьому рівнянню присвячено 2 графічні реалізації, тут та у графіку 5.");
     }
 
 

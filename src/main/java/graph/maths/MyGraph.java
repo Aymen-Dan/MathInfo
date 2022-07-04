@@ -3,6 +3,8 @@ package graph.maths;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.XYChart;
 
+import static java.lang.Math.*;
+
 
 public class MyGraph {
 
@@ -16,7 +18,7 @@ public class MyGraph {
 
 
     private double calculateY1(double x, double constant) {
-        return Math.sqrt(Math.pow(x, 3) / (constant - x));
+        return Math.sqrt(pow(x, 3) / (constant - x));
     }
 
 
@@ -41,7 +43,7 @@ public class MyGraph {
 
 
     private double calculateY2(double x, double constant) {
-        return Math.sqrt(Math.sqrt(Math.pow(constant,4)+4*Math.pow(x,2)*Math.pow(constant,2)) - Math.pow(x, 2) - Math.pow(constant, 2));
+        return Math.sqrt(Math.sqrt(pow(constant,4)+4* pow(x,2)* pow(constant,2)) - pow(x, 2) - pow(constant, 2));
     }
 
     /**Lemniscate of Bernoulli*/
@@ -65,12 +67,13 @@ public class MyGraph {
     }
 
     private double calculateX3(double const1, double const2) {
-        return const1 * Math.sqrt(const2)*Math.cos(const2);
+        return const1 * Math.sqrt(const2)* cos(const2);
     }
     private double calculateY3(double const1, double const2) {
-        return const1 * Math.sqrt(const2)*Math.sin(const2);
+        return const1 * Math.sqrt(const2)* sin(const2);
     }
-    /**Ferma's spiral???*/
+
+    /**Ferma's spiral*/
     public void plotLine3(final double paramA){
 
         XYChart.Series<Number, Number> seriesX = new XYChart.Series<>();
@@ -91,44 +94,41 @@ public class MyGraph {
     }
 
 
-    private double calculate4(double x, double const1, double const2, double const3) {
-        return 0;
+    private double calculateX4(double const1, double const2, double theta) {
+        return (const2 + const1*Math.cos(theta))*Math.cos(theta);
     }
-    /**???*/
-    public void plotLine4(final double paramA, final double paramB, final double paramC){
+    private double calculateY4(double const1, double const2, double theta) {
+        return (const2+const1*Math.cos(theta))* sin(theta);
+    }
+
+    /**Limaçon*/
+    public void plotLine4(final double paramA, final double paramB){
 
         XYChart.Series<Number, Number> series = new XYChart.Series<>();
-        for(double x = -range; x <= range; x = x + 0.01) {
-            series.getData().add(new XYChart.Data<>(x, calculate4(x, paramA, paramB, paramC)));
+        for(double theta = 0; theta <= range; theta = theta + 0.01) {
+             series.getData().add(new XYChart.Data<>(calculateX4(paramA, paramB, theta), calculateY4(paramA, paramB, theta)));
         }
+
         lineGraph.setAxisSortingPolicy(LineChart.SortingPolicy.NONE);
         lineGraph.getData().add(series);
         lineGraph.setLegendVisible(false);
 
-
-
-        XYChart.Series<Number, Number> seriesNegative = new XYChart.Series<>();
-        for(double x = -range; x <= range; x = x + 0.01) {
-            // seriesNegative.getData().add(new XYChart.Data<>(x, -calculateY3(x, paramA, paramB)));
-        }
-        lineGraph.setAxisSortingPolicy(LineChart.SortingPolicy.NONE);
-        lineGraph.getData().add(seriesNegative);
-        lineGraph.setLegendVisible(false);
     }
 
 
-    private double calculate5X(double const1, double const2, double t, double j) {
-        return 2*(Math.cos(const1*t)-Math.pow(Math.cos(const2*t),j));
+    private double calculate5X(double const1, double t) {
+        return 2*(cos(const1*t)- pow(cos(1*t),3));
     }
-    private double calculate5Y(double const1, double const2, double t, double k) {
-        return 2*(Math.sin(const1*t)-2*Math.pow(Math.sin(const2*t),k));
+    private double calculate5Y(double const1,  double t) {
+        return 2*(sin(const1*t)-pow(sin(1*t),3));
     }
-    /**Graph x = 2(cos(a*t) - cos(b*t)^j) & y = 2(sin(c*t) - sin(d*t)^k)*/
-    public void plotLine5(final double paramA, final double paramB, final double paramC, final double paramD, final double paramJ, final double paramK) {
+
+    /**Graph x = 2(cos(A*t) - cos(1*t)^3) & 3 = 2(sin(C*t) - sin(1*t)^3)*/
+    public void plotLine5(final double paramA, final double paramC) {
         XYChart.Series<Number, Number> seriesY1 = new XYChart.Series<>();
 
         for (double T = -range; T <= range; T = T + 0.01) {
-            seriesY1.getData().add(new XYChart.Data<>(calculate5X(paramA, paramB, T, paramJ), calculate5Y(paramC, paramD, T, paramK)));
+            seriesY1.getData().add(new XYChart.Data<>(calculate5X(paramA,T), calculate5Y(paramC, T)));
         }
 
        lineGraph.setAxisSortingPolicy(LineChart.SortingPolicy.NONE);
@@ -137,17 +137,20 @@ public class MyGraph {
 
     }
 
-
     //graph 6
-    private double calculate6Y(double const1, double const2, double t, double k) {
-        return 0;
+    private double calculate6X(double const1, double t) {
+        return 2*(Math.cos(1*t)- pow(Math.cos(const1*t),3));
     }
-    /**Graph x = 2(cos(a*t) - cos(b*t)^j) & y = 2(sin(c*t) - sin(d*t)^k)*/
-    public void plotLine6(final double paramA) {
+    private double calculate6Y(double const1, double t) {
+        return 2*(sin(1*t)-2* pow(sin(const1*t),3));
+    }
+
+    /**Graph x = 2(cos(1*t) - cos(B*t)^3) & y = 2(sin(1*t) - sin(D*t)^3)*/
+    public void plotLine6(final double paramB, final double paramD) {
         XYChart.Series<Number, Number> seriesY1 = new XYChart.Series<>();
 
         for (double T = -range; T <= range; T = T + 0.01) {
-            //seriesY1.getData().add(new XYChart.Data<>(calculate6X(paramA, paramB, T, paramJ), calculate6Y(paramC, paramD, T, paramK)));
+           seriesY1.getData().add(new XYChart.Data<>(calculate6X(paramB, T), calculate6Y(paramD, T)));
         }
         lineGraph.setAxisSortingPolicy(LineChart.SortingPolicy.NONE);
         lineGraph.getData().addAll(seriesY1);
@@ -156,19 +159,6 @@ public class MyGraph {
 
 
 
-    /*public void plotLine(final Function<Double, Double> function) {
-        final XYChart.Series<Double, Double> series = new XYChart.Series<Double, Double>();
-        for (double x = -range; x <= range; x = x + 0.01) {
-            plotPoint(x, function.apply(x), series);
-        }
-        graph.getData().add(series);
-    }
-
-    private void plotPoint(final double x, final double y,
-                           final XYChart.Series<Double, Double> series) {
-        series.getData().add(new XYChart.Data<Double, Double>(x, y));
-    }
-*/
     public void clear() {
         lineGraph.getData().clear();
     }

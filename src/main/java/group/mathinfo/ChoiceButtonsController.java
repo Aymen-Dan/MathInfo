@@ -113,6 +113,7 @@ public class ChoiceButtonsController implements Initializable {
     @FXML
     private void handleReturnButtonAction(final ActionEvent event) {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setResizable(false);
         try {
             stage.setScene(new Scene(FXMLLoader.load(Main.class.getResource("titleWindow.fxml"))));
         } catch (IOException e) {
