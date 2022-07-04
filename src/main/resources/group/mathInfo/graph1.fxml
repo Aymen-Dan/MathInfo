@@ -32,11 +32,11 @@
                         <Cursor fx:constant="CROSSHAIR" />
                     </cursor>
                 </LineChart>
-                <Button fx:id="returnButton" layoutX="24.0" layoutY="366.0" mnemonicParsing="false" onAction="#handleReturnButtonAction" prefHeight="29.0" prefWidth="185.0" text="Return" />
+                <Button fx:id="returnButton" layoutX="24.0" layoutY="366.0" mnemonicParsing="false" onAction="#handleReturnButtonAction" prefHeight="29.0" prefWidth="185.0" text="Повернутися" />
 
                 <AnchorPane layoutX="416.0" minHeight="0.0" minWidth="0.0" prefHeight="400.0" prefWidth="185.0">
                     <children>
-                  <GridPane layoutX="62.0" layoutY="261.0" prefHeight="32.0" prefWidth="84.0">
+                  <GridPane layoutX="62.0" layoutY="255.0" prefHeight="29.0" prefWidth="84.0">
 
                       <columnConstraints>
                       <ColumnConstraints hgrow="SOMETIMES" maxWidth="87.3333740234375" minWidth="10.0" prefWidth="29.999959309895836" />
@@ -58,7 +58,7 @@
                           <Button fx:id="graph1Button" layoutX="45.0" layoutY="297.0" mnemonicParsing="false" onAction="#handleGraph1ButtonAction" prefHeight="38.0" prefWidth="115.0" text="Намалювати" />
                           <Button fx:id="infoButton" layoutX="33.0" layoutY="77.0" mnemonicParsing="false" onAction="#handleGraph1InfoButtonAction" prefHeight="54.0" prefWidth="139.0" text="Більше інформації" />
 
-                        <Text layoutX="39.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Введіть параметри:" wrappingWidth="126.00002034505201">
+                        <Text layoutX="39.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Введіть параметри:" wrappingWidth="126.00002034505201">
                      <font>
                         <Font size="14.0" />
                      </font>

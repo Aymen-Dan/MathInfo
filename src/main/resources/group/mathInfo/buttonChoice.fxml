@@ -17,51 +17,50 @@
 
     <children>
 
-        <Button fx:id="returnButton" layoutX="24.0" layoutY="350.0" mnemonicParsing="false" onAction="#handleReturnButtonAction" prefHeight="29.0" prefWidth="150.0" text="Return" />
-      <Button fx:id="graph2ButtonChoice" layoutX="403.0" layoutY="114.0" mnemonicParsing="false" onAction="#handleChooseGraph2Action" prefHeight="66.0" prefWidth="177.0" text="Лемніската Бернуллі">
+        <Button fx:id="returnButton" layoutX="24.0" layoutY="335.0" mnemonicParsing="false" onAction="#handleReturnButtonAction" prefHeight="29.0" prefWidth="150.0" text="Повернутися" />
+      <Button fx:id="graph2ButtonChoice" layoutX="411.0" layoutY="103.0" mnemonicParsing="false" onAction="#handleChooseGraph2Action" prefHeight="66.0" prefWidth="177.0" text="Лемніската Бернуллі">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Button fx:id="graph4ButtonChoice" layoutX="403.0" layoutY="204.0" mnemonicParsing="false" onAction="#handleChooseGraph4Action" prefHeight="66.0" prefWidth="177.0" text="Графік 4">
+      <Button fx:id="graph4ButtonChoice" layoutX="411.0" layoutY="196.0" mnemonicParsing="false" onAction="#handleChooseGraph4Action" prefHeight="66.0" prefWidth="177.0" text="Графік 4">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Button fx:id="graph5ButtonChoice" layoutX="203.0" layoutY="290.0" mnemonicParsing="false" onAction="#handleChooseGraph5Action" prefHeight="66.0" prefWidth="177.0" text="Графік 5">
+      <Button fx:id="graph5ButtonChoice" layoutX="205.0" layoutY="290.0" mnemonicParsing="false" onAction="#handleChooseGraph5Action" prefHeight="66.0" prefWidth="177.0" text="Графік 5">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Button layoutX="403.0" layoutY="290.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="177.0" text="Button">
+      <Button fx:id="graph6ButtonChoice" layoutX="411.0" layoutY="290.0" mnemonicParsing="false" onAction="#handleChooseGraph6Action" prefHeight="66.0" prefWidth="177.0" text="Button">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Button fx:id="graph3ButtonChoice" layoutX="203.0" layoutY="204.0" mnemonicParsing="false" onAction="#handleChooseGraph3Action" prefHeight="66.0" prefWidth="177.0" text="Спіраль Ферма">
+      <Button fx:id="graph3ButtonChoice" layoutX="205.0" layoutY="196.0" mnemonicParsing="false" onAction="#handleChooseGraph3Action" prefHeight="66.0" prefWidth="177.0" text="Спіраль Ферма">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Button fx:id="graph1ButtonChoice" layoutX="203.0" layoutY="114.0" mnemonicParsing="false" onAction="#handleChooseGraph1Action" prefHeight="66.0" prefWidth="177.0" text="Цисоїда Діокла">
+      <Button fx:id="graph1ButtonChoice" layoutX="205.0" layoutY="103.0" mnemonicParsing="false" onAction="#handleChooseGraph1Action" prefHeight="66.0" prefWidth="177.0" text="Цисоїда Діокла">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
       <Separator layoutX="12.0" layoutY="64.0" prefHeight="0.0" prefWidth="575.0" />
-      <Separator layoutX="203.0" layoutY="188.0" prefHeight="3.0" prefWidth="379.0" />
-      <Separator layoutX="203.0" layoutY="280.0" prefHeight="3.0" prefWidth="379.0" />
-      <Separator layoutX="390.0" layoutY="107.0" orientation="VERTICAL" prefHeight="260.0" prefWidth="6.0" />
-      <Separator layoutX="197.0" layoutY="105.0" prefHeight="3.0" prefWidth="386.0" />
-      <Separator layoutX="200.0" layoutY="365.0" prefHeight="3.0" prefWidth="386.0" />
-      <Separator layoutX="583.0" layoutY="107.0" orientation="VERTICAL" prefHeight="260.0" prefWidth="6.0" />
-      <Separator layoutX="197.0" layoutY="107.0" orientation="VERTICAL" prefHeight="260.0" prefWidth="6.0" />
+      <Separator layoutX="206.0" layoutY="181.0" prefHeight="3.0" prefWidth="386.0" />
+      <Separator layoutX="203.0" layoutY="276.0" prefHeight="3.0" prefWidth="386.0" />
+      <Separator layoutX="396.0" layoutY="99.0" orientation="VERTICAL" prefHeight="260.0" prefWidth="6.0" />
+      <Separator layoutX="203.0" layoutY="97.0" prefHeight="3.0" prefWidth="386.0" />
+      <Separator layoutX="203.0" layoutY="362.0" prefHeight="3.0" prefWidth="386.0" />
+      <Separator layoutX="193.0" layoutY="74.0" orientation="VERTICAL" prefHeight="313.0" prefWidth="6.0" />
       <Label alignment="CENTER" contentDisplay="CENTER" layoutX="32.0" layoutY="10.0" prefHeight="29.0" prefWidth="535.0" text="Меню вибору функції">
          <font>
             <Font size="36.0" />
          </font>
       </Label>
-      <TextFlow layoutX="6.0" layoutY="133.0" prefHeight="171.0" prefWidth="185.0" textAlignment="CENTER">
+      <TextFlow layoutX="6.0" layoutY="136.0" prefHeight="171.0" prefWidth="185.0" textAlignment="CENTER">
          <children>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Виберіть функцію, про яку бажаєте дізнатися більше. Ви зможете отримати інформацію щодо кожної з функцій на відповідній сторінці. Також, графіки функцій можна буде створити на полі 10х10 із заданими вами параметрами." wrappingWidth="182.220703125">
                <font>
@@ -70,9 +69,14 @@
             </Text>
          </children>
       </TextFlow>
-      <Label alignment="CENTER" layoutX="18.0" layoutY="81.0" prefHeight="47.0" prefWidth="164.0" text="Інструкція:">
+      <Label alignment="CENTER" layoutX="17.0" layoutY="83.0" prefHeight="47.0" prefWidth="164.0" text="Інструкція:">
          <font>
             <Font size="20.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="354.0" layoutY="67.0" prefHeight="30.0" prefWidth="89.0" text="Меню">
+         <font>
+            <Font size="22.0" />
          </font>
       </Label>
 

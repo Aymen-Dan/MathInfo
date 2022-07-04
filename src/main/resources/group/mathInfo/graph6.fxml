@@ -76,16 +76,16 @@
                         <TextField fx:id="textField14" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="22.0" prefWidth="24.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
                      </children>
                   </GridPane>
-                          <Button fx:id="graph5Button" layoutX="45.0" layoutY="297.0" mnemonicParsing="false" onAction="#handleGraph5ButtonAction" prefHeight="38.0" prefWidth="115.0" text="Намалювати" />
-                          <Button fx:id="infoButton" layoutX="33.0" layoutY="77.0" mnemonicParsing="false" onAction="#handleGraph5InfoButtonAction" prefHeight="54.0" prefWidth="139.0" text="Більше інформації" />
+                          <Button fx:id="graph6Button" layoutX="45.0" layoutY="297.0" mnemonicParsing="false" onAction="#handleGraph6ButtonAction" prefHeight="38.0" prefWidth="115.0" text="Намалювати" />
+                          <Button fx:id="infoButton" layoutX="33.0" layoutY="77.0" mnemonicParsing="false" onAction="#handleGraph6InfoButtonAction" prefHeight="54.0" prefWidth="139.0" text="Більше інформації" />
 
-                        <Text layoutX="41.0" layoutY="232.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Введіть параметри:" wrappingWidth="126.00002034505201">
+                        <Text layoutX="36.0" layoutY="232.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Введіть параметри:" wrappingWidth="126.00002034505201">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Text>
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-                  <Text layoutX="25.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Графік 5" textAlignment="CENTER" wrappingWidth="155.33333333333326">
+                  <Text layoutX="25.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Графік 6" textAlignment="CENTER" wrappingWidth="155.33333333333326">
                      <font>
                         <Font size="22.0" />
                      </font>
@@ -95,7 +95,7 @@
                   <Separator layoutX="11.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="3.0" />
                   <Separator layoutX="22.0" layoutY="139.0" prefHeight="3.0" prefWidth="164.0" />
                   <Separator layoutX="21.0" layoutY="62.0" prefHeight="3.0" prefWidth="164.0" />
-                  <Text layoutX="19.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x = 2*(сos(a*θ) - сos(b*θ)^3)" textAlignment="CENTER" wrappingWidth="170.6666259765625">
+                  <Text layoutX="19.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x = " textAlignment="CENTER" wrappingWidth="170.6666259765625">
                      <font>
                         <Font size="13.0" />
                      </font>
@@ -106,7 +106,7 @@
                      </font>
                   </Text>
                   <Separator layoutX="21.0" layoutY="214.0" prefHeight="3.0" prefWidth="164.0" />
-                  <Text layoutX="22.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="y = 2*(sin(c*θ) - sin(d*θ)^3)" textAlignment="CENTER" wrappingWidth="164.0">
+                  <Text layoutX="22.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="y = " textAlignment="CENTER" wrappingWidth="164.0">
                      <font>
                         <Font size="13.0" />
                      </font>

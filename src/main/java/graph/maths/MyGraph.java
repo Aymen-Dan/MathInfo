@@ -138,6 +138,23 @@ public class MyGraph {
     }
 
 
+    //graph 6
+    private double calculate6Y(double const1, double const2, double t, double k) {
+        return 0;
+    }
+    /**Graph x = 2(cos(a*t) - cos(b*t)^j) & y = 2(sin(c*t) - sin(d*t)^k)*/
+    public void plotLine6(final double paramA) {
+        XYChart.Series<Number, Number> seriesY1 = new XYChart.Series<>();
+
+        for (double T = -range; T <= range; T = T + 0.01) {
+            //seriesY1.getData().add(new XYChart.Data<>(calculate6X(paramA, paramB, T, paramJ), calculate6Y(paramC, paramD, T, paramK)));
+        }
+        lineGraph.setAxisSortingPolicy(LineChart.SortingPolicy.NONE);
+        lineGraph.getData().addAll(seriesY1);
+        lineGraph.setLegendVisible(false);
+    }
+
+
 
     /*public void plotLine(final Function<Double, Double> function) {
         final XYChart.Series<Double, Double> series = new XYChart.Series<Double, Double>();

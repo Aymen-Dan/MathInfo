@@ -36,6 +36,9 @@ public class ChoiceButtonsController implements Initializable {
     @FXML
     private Button graph5ButtonChoice;
 
+    @FXML
+    private Button graph6ButtonChoice;
+
 
 
     @FXML
@@ -69,6 +72,15 @@ public class ChoiceButtonsController implements Initializable {
 
         rootPane.getChildren().setAll(pane);
     }
+
+    @FXML
+    private void callGraph6() throws IOException {
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("graph6.fxml"));
+
+        rootPane.getChildren().setAll(pane);
+    }
+
+
     @FXML
     private void handleChooseGraph1Action(final ActionEvent event) throws IOException {
         callGraph1();
@@ -89,6 +101,14 @@ public class ChoiceButtonsController implements Initializable {
     private void handleChooseGraph5Action(final ActionEvent event)  throws IOException {
         callGraph5();
     }
+    @FXML
+    private void handleChooseGraph6Action(final ActionEvent event)  throws IOException {
+        callGraph6();
+    }
+
+
+
+
     //return button action
     @FXML
     private void handleReturnButtonAction(final ActionEvent event) {
