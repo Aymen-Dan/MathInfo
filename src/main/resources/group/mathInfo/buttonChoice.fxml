@@ -33,7 +33,7 @@
             <Font size="14.0" />
          </font>
       </Button>
-      <Button fx:id="graph6ButtonChoice" layoutX="411.0" layoutY="298.0" mnemonicParsing="false" onAction="#handleChooseGraph6Action" prefHeight="66.0" prefWidth="177.0" text="Button">
+      <Button fx:id="graph6ButtonChoice" layoutX="411.0" layoutY="298.0" mnemonicParsing="false" onAction="#handleChooseGraph6Action" prefHeight="66.0" prefWidth="177.0" text="Графік 6">
          <font>
             <Font size="14.0" />
          </font>
