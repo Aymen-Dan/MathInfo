@@ -128,6 +128,15 @@ public class GraphScreenController implements Initializable {
 
     }
 
+    @FXML
+    private void handleGraph6ButtonAction(final ActionEvent event) {
+        double a = Double.parseDouble(textField1.getText());
+
+
+        lineMathsGraph.plotLine6(a);
+
+    }
+
 
     @FXML
     private void handleGraph1InfoButtonAction(final ActionEvent event) {
@@ -224,6 +233,24 @@ public class GraphScreenController implements Initializable {
         ((InfoWindowContoller)fxmlLoader.getController()).setContents("Графік 5", "Опис функції");
     }
 
+    @FXML
+    private void handleGraph6InfoButtonAction(final ActionEvent event) {
+        final Stage infoWindow = new Stage();
+        infoWindow.setResizable(false);
+        infoWindow.initModality(Modality.NONE);
+        infoWindow.initOwner(((Node) event.getSource()).getScene().getWindow());
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        try {
+            infoWindow.setScene(new Scene(fxmlLoader.load(getClass().getResource("infoWindow.fxml").openStream())));
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        infoWindow.show();
+
+        ((InfoWindowContoller)fxmlLoader.getController()).setContents("Графік 5", "Опис функції");
+    }
 
 
     @FXML
